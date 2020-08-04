@@ -9,12 +9,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import {
-  defaultGreen,
-  defaultGrey,
-  defaultOrange,
-  defaultRed,
-} from '../../utils/colors';
+import { defaultGreen, defaultWarning, defaultRed } from '../../utils/colors';
 
 const variantIcon = {
   success: CheckCircleIcon,
@@ -33,12 +28,12 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
   },
   infoSnack: {
-    backgroundColor: defaultGrey,
-    color: 'white',
+    backgroundColor: theme.palette.info.main,
+    color: theme.palette.info.contrastText,
   },
   warningSnack: {
-    backgroundColor: defaultOrange,
-    color: 'white',
+    backgroundColor: defaultWarning,
+    color: '#000',
   },
   iconSnack: {
     fontSize: 20,
